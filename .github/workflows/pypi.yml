@@ -4,8 +4,10 @@ name: Publish on pypi
 on:
   push:
     branches: [ "main" ]
+    paths: ["pyproject.toml"]
   pull_request:
     branches: [ "main" ]
+    paths: ["pyproject.toml"]
 
 
 jobs:
