@@ -12,4 +12,5 @@ Contributors
 * Rodrigo Westrupp <rodrigo.westrupp@adroll.com>
 * Sridharan Subramanian <sridharan.subramanian@adroll.com>>
 * Piyush Srivastava <piyush.srivastava@adroll.com>
+* Jonathan Schaeffer <jonathan.schaeffer@univ-grenoble-alpes.fr>
 

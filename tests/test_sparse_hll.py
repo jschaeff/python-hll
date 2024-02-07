@@ -8,7 +8,7 @@ from python_hll.hll import HLL
 from python_hll.hllutil import HLLUtil
 from python_hll.serialization import SerializationUtil
 from python_hll.util import BitUtil
-import probabilistic_test_util
+from . import probabilistic_test_util
 
 """Tests ``HLL`` of type ``HLLType.SPARSE``."""
 

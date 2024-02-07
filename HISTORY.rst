@@ -27,3 +27,9 @@ History
 
 * Fix AttributeError: 'HLL' object has no attribute '_sparse_probabilistic_storage':
   https://github.com/AdRoll/python-hll/pull/4
+
+0.2.0 (2024-02-07)
+------------------
+
+* Fix np.int deprecation
+* Use latest numpy version
