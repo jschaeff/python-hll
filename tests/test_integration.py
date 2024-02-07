@@ -7,7 +7,7 @@ import sys
 from python_hll.util import NumberUtil
 from python_hll.hll import HLL
 from python_hll.hlltype import HLLType
-import probabilistic_test_util
+from . import probabilistic_test_util
 
 """
 Compares the HLLs to the files in the data directory. See README.txt for

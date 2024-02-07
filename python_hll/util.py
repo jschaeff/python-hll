@@ -87,21 +87,21 @@ class BitUtil:
         """
         Equivalent to Java >>> on a long value
         """
-        return val if n == 0 else int(np.uint64(val) >> np.uint64(n))
+        return val if n == 0 else int(np.array(val).astype(np.uint64) >> np.uint64(n))
 
     @classmethod
     def unsigned_right_shift_int(cls, val, n):
         """
         Equivalent to Java >>> on an int value
         """
-        return val if n == 0 else int(np.uint32(val) >> np.uint32(n))
+        return val if n == 0 else int(np.array(val).astype(np.uint32) >> np.uint32(n))
 
     @classmethod
     def unsigned_right_shift_byte(cls, val, n):
         """
         Equivalent to Java >>> on a byte value
         """
-        return val if n == 0 else int(np.uint32(val) >> np.uint32(n))
+        return val if n == 0 else int(np.array(val).astype(np.uint32) >> np.uint32(n))
 
     @classmethod
     def to_signed_byte(cls, i):
@@ -124,7 +124,7 @@ class BitUtil:
         :rtype: long
         """
         x = np.int64(long_x)
-        y = np.int(int_y)
+        y = np.int32(int_y)
         z = np.left_shift(x, y)
 
         return np.int64(z.item())
@@ -140,7 +140,7 @@ class BitUtil:
         :rtype: int
         """
         x = np.int32(int_x)
-        y = np.int(int_y)
+        y = np.int32(int_y)
         z = np.left_shift(x, y)
 
         return z.item()
@@ -155,8 +155,8 @@ class BitUtil:
         :returns: left shift result for, x << y
         :rtype: int
         """
-        x = np.int8(byte_x)  # converts to signed byte, since byte is signed in java
-        y = np.int(int_y)
+        x = np.array(byte_x).astype(np.int8)  # converts to signed byte, since byte is signed in java
+        y = np.int32(int_y)
         z = np.left_shift(x, y)
 
         # In Java, (byte)128 << 3 produces an int.
